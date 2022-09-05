@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listbgTwoRowModel" type="com.foodly.app.modules.homepagevone.data.model.ListbgTwoRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearCardsmall"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStylewhite_1">
+        <ImageView android:id="@+id/imageBGTwo"
+            android:layout_height="@dimen/_160pxh"
+            android:layout_width="@dimen/_200pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_10pxh}"
+            imageRes="@{@drawable/img_bg_9}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_bg_9"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnthehalalguysTwo"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTheHalalGuysTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02" android:singleLine="true"
+                android:text="@{listbgTwoRowModel.txtTheHalalGuysTwo}"
+                style="@style/txtSFProDisplaymedium20" tools:text="@string/lbl_mcdonald_s2"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtColarodoSanFTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listbgTwoRowModel.txtColarodoSanFTwo}"
+                style="@style/txtSFProTextregular16" tools:text="@string/msg_colarodo_san_f"/>
+            <LinearLayout android:id="@+id/linearRow45"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btn45Two"
+                    android:layout_height="@dimen/_20pxv"
+                    android:layout_width="@dimen/_36pxh"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:paddingBottom="@dimen/_4pxv"
+                    android:paddingEnd="@dimen/_8pxh"
+                    android:paddingStart="@dimen/_8pxh"
+                    android:paddingTop="@dimen/_4pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_4_5"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded" tools:text="@string/lbl_4_5"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTimeTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_3pxv"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.25"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{listbgTwoRowModel.txtTimeTwo}"
+                    style="@style/txtSFProTextmedium14" tools:text="@string/lbl_25min"/>
+                <View
+                    android:background="@drawable/rectangle_bg_bluegray_400_radius_2"
+                    android:id="@+id/viewOvalFour"
+                    android:layout_height="@dimen/_4pxh"
+                    android:layout_marginBottom="@dimen/_6pxv"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_4pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFreedeliveryTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_weight="0.51"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{listbgTwoRowModel.txtFreedeliveryTwo}"
+                    style="@style/txtSFProTextmedium14" tools:text="@string/lbl_free_delivery"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSliderfreedeliveryoModel" type="com.foodly.app.modules.walkthrough.data.model.ImageSliderSliderfreedeliveryoModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnfreedeliveryo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtFreedeliveryo"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15pxh"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{imageSliderSliderfreedeliveryoModel.txtFreedeliveryo}"
+            style="@style/txtSFProDisplaybold30" tools:text="@string/msg_free_delivery_o"/>
+        <TextView android:gravity="start"
+            android:id="@+id/txtFreedeliveryf"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:text="@{imageSliderSliderfreedeliveryoModel.txtFreedeliveryf}"
+            style="@style/txtSFProTextregular16" tools:text="@string/msg_free_delivery_f2"/>
+    </LinearLayout>
+</layout>

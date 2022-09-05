@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="yourOrdersVM" type="com.foodly.app.modules.yourorders.data.viewmodel.YourOrdersVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnyourOrders"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linear34Yourorders"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnYourOrders"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:paddingBottom="@dimen/_22pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_22pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_your_orders"
+                android:textAllCaps="false" style="@style/btnSolid" tools:text="@string/lbl_your_orders"/>
+            <LinearLayout android:id="@+id/linearRowupcomingorders"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_28pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtUpcomingorders"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.71"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{yourOrdersVM.yourOrdersModel.txtUpcomingorders}"
+                    android:textAllCaps="true"
+                    style="@style/txtSFProTextmedium16_1" tools:text="@string/lbl_upcoming_orders"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtClearall"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginStart="@dimen/_98pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.29"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{yourOrdersVM.yourOrdersModel.txtClearall}"
+                    android:textAllCaps="true"
+                    style="@style/txtSFProTextmedium12_4" tools:text="@string/lbl_clear_all"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerListfood"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_23pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_20pxh}" tools:itemCount="3" tools:listitem="@layout/row_listfood1"/>
+            <FrameLayout android:id="@+id/frameStackupcomingordersOne"
+                android:layout_height="@dimen/_414pxv"
+                android:layout_marginTop="@dimen/_34pxv" android:layout_width="match_parent">
+                <LinearLayout android:id="@+id/linearUpcomingorders"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_21pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/linearRowupcomingordersOne"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtUpcomingordersOne"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.63"
+                            android:layout_width="0dp"
+                            android:letterSpacing="0.03"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{yourOrdersVM.yourOrdersModel.txtUpcomingordersOne}"
+                            android:textAllCaps="true"
+                            style="@style/txtSFProTextmedium16_1" tools:text="@string/lbl_past_orders"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtClearallOne"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_2pxv"
+                            android:layout_marginStart="@dimen/_148pxh"
+                            android:layout_marginTop="@dimen/_1pxv"
+                            android:layout_weight="0.37"
+                            android:layout_width="0dp"
+                            android:letterSpacing="0.02"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{yourOrdersVM.yourOrdersModel.txtClearallOne}"
+                            android:textAllCaps="true"
+                            style="@style/txtSFProTextmedium12_4" tools:text="@string/lbl_clear_all"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/recyclerListfoodThree"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_2pxh"
+                        android:layout_marginTop="@dimen/_23pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_20pxh}" tools:itemCount="3" tools:listitem="@layout/row_listfood_three1"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTabbar2"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_162pxv"
+                    android:layout_marginTop="@dimen/_162pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_55pxh}"
+                    style="@style/groupStylewhite_6" tools:itemCount="4" tools:listitem="@layout/row_tabbar5"/>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

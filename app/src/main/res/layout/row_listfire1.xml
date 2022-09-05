@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listfire1RowModel" type="com.foodly.app.modules.singlerestaurantvtwo.data.model.Listfire1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnfire"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowfire"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <FrameLayout android:id="@+id/frameStackfire"
+                android:layout_height="@dimen/_24pxv" android:layout_width="@dimen/_21pxh">
+                <ImageView android:id="@+id/imageFire"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_fire"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_fire"/>
+                <ImageView android:id="@+id/imageClock"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_clock_16x16"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_clock_16x16"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end" android:id="@+id/txtFree"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_3pxv"
+                android:layout_marginStart="@dimen/_6pxh"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_weight="0.61" android:layout_width="0dp"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listfire1RowModel.txtFree}"
+                style="@style/txtSFProTextmedium16" tools:text="@string/lbl_free"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:gravity="end"
+            android:id="@+id/txtDelivery"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{listfire1RowModel.txtDelivery}"
+            style="@style/txtSFProTextregular12_1" tools:text="@string/lbl_delivery"/>
+    </LinearLayout>
+</layout>

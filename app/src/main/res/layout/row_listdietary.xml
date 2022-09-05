@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listdietaryRowModel" type="com.foodly.app.modules.filtersvtwo.data.model.ListdietaryRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumndietary"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearRowdietary"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDietary"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.51" android:layout_width="0dp"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listdietaryRowModel.txtDietary}"
+                android:textAllCaps="true"
+                style="@style/txtSFProTextmedium16_2" tools:text="@string/lbl_dietary"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClearallCopy"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_196pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_weight="0.49" android:layout_width="0dp"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listdietaryRowModel.txtClearallCopy}"
+                android:textAllCaps="true"
+                style="@style/txtSFProTextmedium12_1" tools:text="@string/lbl_clear_all"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowctaseconderyThree"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCTASeconderyThree"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.29" android:layout_width="0dp"
+                android:letterSpacing="0.05"
+                android:paddingBottom="@dimen/_12pxv"
+                android:paddingEnd="@dimen/_26pxh"
+                android:paddingStart="@dimen/_27pxh"
+                android:paddingTop="@dimen/_12pxv"
+                android:singleLine="true"
+                android:text="@{listdietaryRowModel.txtCTASeconderyThree}"
+                android:textAllCaps="true"
+                style="@style/txtSolidRounded_3" tools:text="@string/lbl_any"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCTASeconderyOneThree"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12pxh"
+                android:layout_weight="0.4" android:layout_width="0dp"
+                android:letterSpacing="0.05"
+                android:paddingBottom="@dimen/_12pxv"
+                android:paddingEnd="@dimen/_14pxh"
+                android:paddingStart="@dimen/_15pxh"
+                android:paddingTop="@dimen/_12pxv"
+                android:singleLine="true"
+                android:text="@{listdietaryRowModel.txtCTASeconderyOneThree}"
+                android:textAllCaps="true"
+                style="@style/txtSolidRounded_2" tools:text="@string/lbl_vegetarian"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCTASeconderyTwoTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12pxh"
+                android:layout_weight="0.31" android:layout_width="0dp"
+                android:letterSpacing="0.05"
+                android:paddingBottom="@dimen/_12pxv"
+                android:paddingEnd="@dimen/_21pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_12pxv"
+                android:singleLine="true"
+                android:text="@{listdietaryRowModel.txtCTASeconderyTwoTwo}"
+                android:textAllCaps="true"
+                style="@style/txtSolidRounded_2" tools:text="@string/lbl_vegan"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnGlutenfree"
+            android:layout_height="@dimen/_38pxv"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_12pxv"
+            android:layout_width="@dimen/_122pxh"
+            android:letterSpacing="0.05"
+            android:paddingBottom="@dimen/_12pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_17pxh"
+            android:paddingTop="@dimen/_12pxv" android:singleLine="true"
+            android:text="@string/lbl_gluten_free"
+            android:textAllCaps="true" style="@style/btnSolidRounded_3" tools:text="@string/lbl_gluten_free"/>
+    </LinearLayout>
+</layout>

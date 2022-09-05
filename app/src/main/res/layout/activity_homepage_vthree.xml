@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homepageVthreeVM" type="com.foodly.app.modules.homepagevthree.data.viewmodel.HomepageVthreeVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnindicator"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStylewhite_7">
+            <LinearLayout android:id="@+id/linearColumndeliveryto"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_13pxv"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_107pxh"
+                android:layout_marginTop="@dimen/_13pxv"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDeliveryto"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_40pxh"
+                    android:layout_marginStart="@dimen/_40pxh"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{homepageVthreeVM.homepageVthreeModel.txtDeliveryto}"
+                    android:textAllCaps="true"
+                    style="@style/txtSFProTextmedium12_2" tools:text="@string/lbl_delivery_to"/>
+                <LinearLayout android:id="@+id/linearRowdeliveryaddres"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <Spinner android:id="@+id/spinnerDeliveryaddres"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.81"
+                        android:layout_width="0dp" tools:listitem="@layout/spinner_item"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFilter"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_3pxv"
+                        android:layout_marginStart="@dimen/_52pxh"
+                        android:layout_marginTop="@dimen/_2pxv"
+                        android:layout_weight="0.19"
+                        android:layout_width="0dp"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{homepageVthreeVM.homepageVthreeModel.txtFilter}"
+                        style="@style/txtSFProTextregular16_4" tools:text="@string/lbl_filter"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linear16HomepageVTh"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <FrameLayout android:id="@+id/frameStackbg"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_282pxv"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh" android:layout_width="@dimen/_335pxh">
+                    <com.asksira.loopingviewpager.LoopingViewPager
+                        android:id="@+id/imageSliderSliderbg"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_282pxv"
+                        android:layout_width="match_parent"
+                        app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+                    <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                        android:id="@+id/indicatorIndicator"
+                        android:layout_gravity="bottom|end"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_117pxv"
+                        android:layout_marginEnd="@dimen/_20pxh"
+                        android:layout_marginStart="@dimen/_20pxh"
+                        android:layout_marginTop="@dimen/_117pxv"
+                        android:layout_width="wrap_content"
+                        app:drawable_normal="@drawable/indicator_unselected_bg_white_a700_4c_radius_8"
+                        app:drawable_selected="@drawable/indicator_selected_bg_white_a700_radius_8"
+                        app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_8pxh"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/frameStackbgOne"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_282pxv"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_335pxh">
+                    <com.asksira.loopingviewpager.LoopingViewPager
+                        android:id="@+id/imageSliderSliderbgOne"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_282pxv"
+                        android:layout_width="match_parent"
+                        app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+                    <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                        android:id="@+id/indicatorIndicatorOne"
+                        android:layout_gravity="bottom|end"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_117pxv"
+                        android:layout_marginEnd="@dimen/_20pxh"
+                        android:layout_marginStart="@dimen/_20pxh"
+                        android:layout_marginTop="@dimen/_117pxv"
+                        android:layout_width="wrap_content"
+                        app:drawable_normal="@drawable/indicator_unselected_bg_white_a700_4c_radius_8"
+                        app:drawable_selected="@drawable/indicator_selected_bg_white_a700_radius_8"
+                        app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_8pxh"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/frameStackbgTwo"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_282pxv"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_335pxh">
+                    <com.asksira.loopingviewpager.LoopingViewPager
+                        android:id="@+id/imageSliderSliderbgTwo"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_282pxv"
+                        android:layout_width="match_parent"
+                        app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+                    <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                        android:id="@+id/indicatorIndicatorTwo"
+                        android:layout_gravity="bottom|end"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_117pxv"
+                        android:layout_marginEnd="@dimen/_20pxh"
+                        android:layout_marginStart="@dimen/_20pxh"
+                        android:layout_marginTop="@dimen/_117pxv"
+                        android:layout_width="wrap_content"
+                        app:drawable_normal="@drawable/indicator_unselected_bg_white_a700_4c_radius_8"
+                        app:drawable_selected="@drawable/indicator_selected_bg_white_a700_radius_8"
+                        app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_8pxh"/>
+                </FrameLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumntypeoffoods"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_34pxv"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearRowtypeoffoods"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTypeofFoods"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.76"
+                            android:layout_width="0dp"
+                            android:letterSpacing="0.01"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{homepageVthreeVM.homepageVthreeModel.txtTypeofFoods}"
+                            style="@style/txtSFProDisplaysemibold24" tools:text="@string/lbl_type_of_foods"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSeeall"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5pxv"
+                            android:layout_marginStart="@dimen/_138pxh"
+                            android:layout_marginTop="@dimen/_1pxv"
+                            android:layout_weight="0.24"
+                            android:layout_width="0dp"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{homepageVthreeVM.homepageVthreeModel.txtSeeall}"
+                            style="@style/txtSFProTextregular16_5" tools:text="@string/lbl_see_all"/>
+                    </LinearLayout>
+                    <HorizontalScrollView android:fillViewport="true"
+                        android:id="@+id/horizontalScrollHorizontalscrollrectangle"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_18pxv"
+                        android:layout_width="match_parent" android:scrollbars="none">
+                        <LinearLayout
+                            android:id="@+id/linearRowrectangle"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <LinearLayout android:gravity="start"
+                                android:id="@+id/linearFoodcardxsmal"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.32"
+                                android:layout_width="0dp"
+                                android:orientation="vertical" style="@style/groupStylewhite_2">
+                                <ImageView
+                                    android:id="@+id/imageRectangle"
+                                    android:layout_height="@dimen/_100pxh"
+                                    android:layout_width="match_parent"
+                                    android:scaleType="fitXY"
+                                    cornerRadius="@{@dimen/_8pxh}"
+                                    imageRes="@{@drawable/img_rectangle}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtBurgers120"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_16pxv"
+                                    android:layout_width="match_parent"
+                                    android:lineSpacingExtra="@dimen/_1pxh"
+                                    android:singleLine="true"
+                                    android:text="@{homepageVthreeVM.homepageVthreeModel.txtBurgers120}"
+                                    style="@style/txtSFProTextregular16_4" tools:text="@string/lbl_burgers_120"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:gravity="center_horizontal"
+                                android:id="@+id/linearFoodcardxsmal1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_14pxh"
+                                android:layout_weight="0.32"
+                                android:layout_width="0dp"
+                                android:orientation="vertical" style="@style/groupStylewhite_2">
+                                <ImageView android:gravity="start"
+                                    android:id="@+id/imageRectangleOne"
+                                    android:layout_height="@dimen/_100pxh"
+                                    android:layout_width="match_parent"
+                                    android:scaleType="fitXY"
+                                    cornerRadius="@{@dimen/_8pxh}"
+                                    imageRes="@{@drawable/img_rectangle_100x100}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_100x100"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtBurgers120One"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_2pxv"
+                                    android:layout_marginEnd="@dimen/_11pxh"
+                                    android:layout_marginStart="@dimen/_11pxh"
+                                    android:layout_marginTop="@dimen/_15pxv"
+                                    android:layout_width="match_parent"
+                                    android:lineSpacingExtra="@dimen/_1pxh"
+                                    android:singleLine="true"
+                                    android:text="@{homepageVthreeVM.homepageVthreeModel.txtBurgers120One}"
+                                    style="@style/txtSFProTextregular16_4" tools:text="@string/lbl_pizza_187"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:gravity="center_horizontal"
+                                android:id="@+id/linearFoodcardxsmal2"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_14pxh"
+                                android:layout_weight="0.32"
+                                android:layout_width="0dp"
+                                android:orientation="vertical" style="@style/groupStylewhite_2">
+                                <ImageView android:gravity="start"
+                                    android:id="@+id/imageRectangleTwo"
+                                    android:layout_height="@dimen/_100pxh"
+                                    android:layout_width="match_parent"
+                                    android:scaleType="fitXY"
+                                    cornerRadius="@{@dimen/_8pxh}"
+                                    imageRes="@{@drawable/img_rectangle_1}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_1"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtBurgers120Two"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_2pxv"
+                                    android:layout_marginEnd="@dimen/_8pxh"
+                                    android:layout_marginStart="@dimen/_7pxh"
+                                    android:layout_marginTop="@dimen/_15pxv"
+                                    android:layout_width="match_parent"
+                                    android:lineSpacingExtra="@dimen/_1pxh"
+                                    android:singleLine="true"
+                                    android:text="@{homepageVthreeVM.homepageVthreeModel.txtBurgers120Two}"
+                                    style="@style/txtSFProTextregular16_4" tools:text="@string/lbl_soups_123"/>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="start"
+                                android:id="@+id/linearFoodcardxsmal3"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_14pxh"
+                                android:layout_weight="0.32"
+                                android:layout_width="0dp"
+                                android:orientation="vertical" style="@style/groupStylewhite_2">
+                                <ImageView
+                                    android:id="@+id/imageRectangleThree"
+                                    android:layout_height="@dimen/_100pxh"
+                                    android:layout_width="match_parent"
+                                    android:scaleType="fitXY"
+                                    cornerRadius="@{@dimen/_8pxh}"
+                                    imageRes="@{@drawable/img_rectangle_2}"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_2"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtBurgers120Three"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10pxv"
+                                    android:layout_width="match_parent"
+                                    android:lineSpacingExtra="@dimen/_8pxh"
+                                    android:singleLine="true"
+                                    android:text="@{homepageVthreeVM.homepageVthreeModel.txtBurgers120Three}"
+                                    style="@style/txtSFProTextregular16_4" tools:text="@string/lbl_sandwich"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/frameStacknewrestaurants"
+                    android:layout_height="@dimen/_345pxv"
+                    android:layout_marginTop="@dimen/_34pxv" android:layout_width="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearColumnnewrestaurants"
+                        android:layout_gravity="top|end"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearRownewrestaurants"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtNewRestaurants"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.79"
+                                android:layout_width="0dp"
+                                android:letterSpacing="0.01"
+                                android:lineSpacingExtra="@dimen/_1pxh"
+                                android:singleLine="true"
+                                android:text="@{homepageVthreeVM.homepageVthreeModel.txtNewRestaurants}"
+                                style="@style/txtSFProDisplaysemibold24" tools:text="@string/lbl_new_restaurants"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtSeeallOne"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_3pxv"
+                                android:layout_marginStart="@dimen/_104pxh"
+                                android:layout_marginTop="@dimen/_3pxv"
+                                android:layout_weight="0.21"
+                                android:layout_width="0dp"
+                                android:lineSpacingExtra="@dimen/_1pxh"
+                                android:singleLine="true"
+                                android:text="@{homepageVthreeVM.homepageVthreeModel.txtSeeallOne}"
+                                style="@style/txtSFProTextregular16_5" tools:text="@string/lbl_see_all"/>
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerListbgThree"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginTop="@dimen/_20pxv"
+                            android:layout_width="match_parent"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            itemSpace="@{@dimen/_14pxh}"
+                            tools:itemCount="2" tools:listitem="@layout/row_listbg_three"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerTabbar2"
+                        android:layout_gravity="bottom|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_55pxh}"
+                        style="@style/groupStylewhite_6"
+                        tools:itemCount="4" tools:listitem="@layout/row_tabbar6"/>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

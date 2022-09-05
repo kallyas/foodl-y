@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchFoodVM" type="com.foodly.app.modules.searchfood.data.viewmodel.SearchFoodVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnsearch"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_25pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_29pxh"
+            android:layout_marginStart="@dimen/_29pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageSearch"
+                    android:layout_height="@dimen/_17pxh"
+                    android:layout_marginBottom="@dimen/_3pxv"
+                    android:layout_marginTop="@dimen/_3pxv"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_search_bluegray_400"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_search_bluegray_400"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSearchOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:layout_weight="0.82"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{searchFoodVM.searchFoodModel.txtSearchOne}"
+                    style="@style/txtSFProDisplaysemibold24_4" tools:text="@string/lbl_search"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:gravity="start"
+            android:id="@+id/frameStacktopcategories"
+            android:layout_height="@dimen/_720pxv"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+            <LinearLayout android:id="@+id/linearColumntopcategories"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTopCategories"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{searchFoodVM.searchFoodModel.txtTopCategories}"
+                    style="@style/txtSFProTextregular16_9" tools:text="@string/lbl_top_categories"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerGridbg"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_15pxh}"
+                    tools:itemCount="8" tools:listitem="@layout/row_gridbg2"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTabbar2"
+                android:layout_gravity="bottom|start"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_40pxv"
+                android:layout_marginTop="@dimen/_40pxv"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_55pxh}"
+                style="@style/groupStylewhite_6" tools:itemCount="4" tools:listitem="@layout/row_tabbar10"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

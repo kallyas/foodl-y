@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homepagViewOrderVM" type="com.foodly.app.modules.homepagvieworder.data.viewmodel.HomepagViewOrderVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linear37HomepagView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="start" android:id="@+id/recyclerTabbar2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_55pxh}"
+            style="@style/groupStylewhite_6" tools:itemCount="4" tools:listitem="@layout/row_tabbar4"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listsendRowModel" type="com.foodly.app.modules.typelocation.data.model.ListsendRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAddress"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageSend"
+            android:layout_height="@dimen/_19pxh"
+            android:layout_marginBottom="@dimen/_24pxv"
+            android:layout_marginStart="@dimen/_4pxh"
+            android:layout_marginTop="@dimen/_22pxv"
+            android:layout_width="@dimen/_19pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_send_19x19"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_send_19x19"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnsanfrancisco"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_weight="0.94" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylewhite_9">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSanFrancisco"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listsendRowModel.txtSanFrancisco}"
+                style="@style/txtSFProTextregular16_4" tools:text="@string/lbl_san_francisco"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCalifornia"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_13pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listsendRowModel.txtCalifornia}"
+                style="@style/txtSFProTextregular13" tools:text="@string/lbl_california"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

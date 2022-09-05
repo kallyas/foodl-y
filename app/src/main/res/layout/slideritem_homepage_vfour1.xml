@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSlidershadowModel" type="com.foodly.app.modules.homepagevfour.data.model.ImageSliderSlidershadowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameShadow"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_339pxh"
+        android:layout_marginStart="@dimen/_339pxh"
+        android:layout_marginTop="@dimen/_30pxv" android:layout_width="match_parent">
+        <ImageView android:id="@+id/imageShadow"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_155pxh"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            imageUrl="@{imageSliderSlidershadowModel.imageShadow}"
+            placeHolder="@{@drawable/image_not_found}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_shadow"/>
+        <ImageView android:id="@+id/imageShadowOne"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_155pxh"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            imageUrl="@{imageSliderSlidershadowModel.imageShadowOne}"
+            placeHolder="@{@drawable/image_not_found}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_shadow_155x250"/>
+    </FrameLayout>
+</layout>
