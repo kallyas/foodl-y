@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSliderchooseyourfooModel" type="com.foodly.app.modules.walkthrough2.data.model.ImageSliderSliderchooseyourfooModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnchooseyourfoo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtChooseyourfoo"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_19pxh"
+            android:layout_marginStart="@dimen/_19pxh"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{imageSliderSliderchooseyourfooModel.txtChooseyourfoo}"
+            style="@style/txtSFProDisplaybold30" tools:text="@string/msg_choose_your_foo"/>
+        <TextView android:gravity="start"
+            android:id="@+id/txtEasilyfindyou"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:text="@{imageSliderSliderchooseyourfooModel.txtEasilyfindyou}"
+            style="@style/txtSFProTextregular16" tools:text="@string/msg_easily_find_you"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="enterAddressVM" type="com.foodly.app.modules.enteraddress.data.viewmodel.EnterAddressVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear12EnterAddres"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imagePlus"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_11pxh"
+            android:layout_marginEnd="@dimen/_31pxh"
+            android:layout_marginStart="@dimen/_31pxh"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_width="@dimen/_11pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_plus"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtLanguage"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_37pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{enterAddressVM.enterAddressModel.txtLanguage}"
+            style="@style/txtSFProDisplaysemibold24" tools:text="@string/msg_find_restaurant"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtPleaseenteryo"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:text="@{enterAddressVM.enterAddressModel.txtPleaseenteryo}"
+            style="@style/txtSFProTextregular16" tools:text="@string/msg_please_enter_yo"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearCurrentlocatio"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_30pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius">
+            <ImageView android:id="@+id/imageSend"
+                android:layout_height="@dimen/_19pxh"
+                android:layout_marginBottom="@dimen/_15pxv"
+                android:layout_marginStart="@dimen/_83pxh"
+                android:layout_marginTop="@dimen/_13pxv"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_send"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_send"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtUsecurrentloc"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15pxv"
+                android:layout_marginEnd="@dimen/_78pxh"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_weight="0.88" android:layout_width="0dp"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{enterAddressVM.enterAddressModel.txtUsecurrentloc}"
+                style="@style/txtSFProTextregular16_5" tools:text="@string/msg_use_current_loc"/>
+        </LinearLayout>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_border_bluegray_400_1a_radius_8"
+            android:drawablePadding="@dimen/_17pxh"
+            android:drawableStart="@drawable/img_location"
+            android:ellipsize="end"
+            android:hint="@string/msg_enter_a_new_add"
+            android:id="@+id/etSearchform" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20pxh"
+            android:layout_marginVertical="@dimen/_20pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_22pxh"
+            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
+            android:text="@={enterAddressVM.enterAddressModel.etSearchformValue}"
+            android:textColorHint="@color/bluegray_400"
+            style="@style/etSolidRoundedOutline_2" tools:ignore="Autofill"/>
+    </LinearLayout>
+</layout>

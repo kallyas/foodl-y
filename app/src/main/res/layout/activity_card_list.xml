@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cardListVM" type="com.foodly.app.modules.cardlist.data.viewmodel.CardListVM"/>
+    </data>
+    <LinearLayout android:gravity="end"
+        android:id="@+id/linear42Cardlist"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearBarsTopbars1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_A700">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginBottom="@dimen/_15pxv"
+                    android:layout_marginStart="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_15pxv"
+                    android:layout_width="@dimen/_8pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPaymentMethods"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_13pxv"
+                    android:layout_marginEnd="@dimen/_120pxh"
+                    android:layout_marginStart="@dimen/_84pxh"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_weight="0.94"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{cardListVM.cardListModel.txtPaymentMethods}"
+                    style="@style/txtSFProTextsemibold16" tools:text="@string/lbl_payment_methods"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="end"
+            android:id="@+id/linearList6card"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylewhite_A700">
+            <ImageView android:id="@+id/imageRectangle"
+                android:layout_height="@dimen/_34pxh"
+                android:layout_marginBottom="@dimen/_19pxv"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_width="@dimen/_40pxh"
+                android:scaleType="fitXY" cornerRadius="@{@dimen/_6pxh}"
+                imageRes="@{@drawable/img_rectangle_34x40}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_34x40"/>
+            <LinearLayout android:id="@+id/linearRowpaypal"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_weight="0.88" android:layout_width="0dp"
+                android:orientation="horizontal" style="@style/groupStylewhite_9">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnpaypal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_14pxv"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_weight="0.97"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPayPal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{cardListVM.cardListModel.txtPayPal}"
+                        style="@style/txtSFProTextmedium16" tools:text="@string/lbl_paypal"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDeafultPayment"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{cardListVM.cardListModel.txtDeafultPayment}"
+                        style="@style/txtSFProTextregular14_2" tools:text="@string/lbl_deafult_payment"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageArrowright"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginBottom="@dimen/_29pxv"
+                    android:layout_marginEnd="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_29pxv"
+                    android:layout_width="@dimen/_8pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright_black_935"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_black_935"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="end"
+            android:id="@+id/linearList6card1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylewhite_A700">
+            <ImageView android:id="@+id/imageRectangleOne"
+                android:layout_height="@dimen/_34pxh"
+                android:layout_marginBottom="@dimen/_19pxv"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_width="@dimen/_40pxh"
+                android:scaleType="fitXY" cornerRadius="@{@dimen/_6pxh}"
+                imageRes="@{@drawable/img_rectangle_4}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_4"/>
+            <LinearLayout android:id="@+id/linearRowpaypalOne"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_weight="0.88" android:layout_width="0dp"
+                android:orientation="horizontal" style="@style/groupStylewhite_9">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnpaypalOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15pxv"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_weight="0.97"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPayPalOne"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{cardListVM.cardListModel.txtPayPalOne}"
+                        style="@style/txtSFProTextmedium16" tools:text="@string/lbl_mastercard"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDeafultPaymentOne"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_11pxv"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{cardListVM.cardListModel.txtDeafultPaymentOne}"
+                        style="@style/txtSFProTextregular14_2" tools:text="@string/lbl_not_deafult"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageArrowrightOne"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginBottom="@dimen/_29pxv"
+                    android:layout_marginEnd="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_29pxv"
+                    android:layout_width="@dimen/_8pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright_black_935"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_black_935"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="end"
+            android:id="@+id/linearList6card2"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_484pxv"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylewhite_A700">
+            <ImageView android:id="@+id/imageRectangleTwo"
+                android:layout_height="@dimen/_34pxh"
+                android:layout_marginBottom="@dimen/_19pxv"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_width="@dimen/_40pxh"
+                android:scaleType="fitXY" cornerRadius="@{@dimen/_6pxh}"
+                imageRes="@{@drawable/img_rectangle_5}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_5"/>
+            <LinearLayout android:id="@+id/linearRowpaypalTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_weight="0.88" android:layout_width="0dp"
+                android:orientation="horizontal" style="@style/groupStylewhite_9">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnpaypalTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15pxv"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_weight="0.97"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPayPalTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{cardListVM.cardListModel.txtPayPalTwo}"
+                        style="@style/txtSFProTextmedium16" tools:text="@string/lbl_visa"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDeafultPaymentTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_11pxv"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{cardListVM.cardListModel.txtDeafultPaymentTwo}"
+                        style="@style/txtSFProTextregular14_2" tools:text="@string/lbl_not_deafult"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageArrowrightTwo"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginBottom="@dimen/_29pxv"
+                    android:layout_marginEnd="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_29pxv"
+                    android:layout_width="@dimen/_8pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright_black_935"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_black_935"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

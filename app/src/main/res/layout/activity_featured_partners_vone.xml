@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="featuredPartnersVoneVM" type="com.foodly.app.modules.featuredpartnersvone.data.viewmodel.FeaturedPartnersVoneVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearBarsTopbars1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_A700">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginBottom="@dimen/_15pxv"
+                    android:layout_marginStart="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_15pxv"
+                    android:layout_width="@dimen/_8pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFeaturedPartne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_14pxv"
+                    android:layout_marginEnd="@dimen/_120pxh"
+                    android:layout_marginStart="@dimen/_85pxh"
+                    android:layout_marginTop="@dimen/_13pxv"
+                    android:layout_weight="0.94"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{featuredPartnersVoneVM.featuredPartnersVoneModel.txtFeaturedPartne}"
+                    style="@style/txtSFProTextsemibold16" tools:text="@string/msg_featured_partne"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <FrameLayout android:id="@+id/frameStack"
+                android:layout_height="@dimen/_886pxv" android:layout_width="match_parent">
+                <LinearLayout android:id="@+id/linearFeaturedPartne"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <FrameLayout android:id="@+id/frameStackbg"
+                        android:layout_height="@dimen/_282pxv" android:layout_width="@dimen/_335pxh">
+                        <com.asksira.loopingviewpager.LoopingViewPager
+                            android:id="@+id/imageSliderSliderbg"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_282pxv"
+                            android:layout_width="match_parent"
+                            app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+                        <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                            android:id="@+id/indicatorIndicator"
+                            android:layout_gravity="bottom|end"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_117pxv"
+                            android:layout_marginEnd="@dimen/_20pxh"
+                            android:layout_marginStart="@dimen/_20pxh"
+                            android:layout_marginTop="@dimen/_117pxv"
+                            android:layout_width="wrap_content"
+                            app:drawable_normal="@drawable/indicator_unselected_bg_white_a700_4c_radius_8"
+                            app:drawable_selected="@drawable/indicator_selected_bg_white_a700_radius_8"
+                            app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_8pxh"/>
+                    </FrameLayout>
+                    <FrameLayout android:id="@+id/frameStackbgOne"
+                        android:layout_height="@dimen/_282pxv"
+                        android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_335pxh">
+                        <com.asksira.loopingviewpager.LoopingViewPager
+                            android:id="@+id/imageSliderSliderbgOne"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_282pxv"
+                            android:layout_width="match_parent"
+                            app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+                        <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                            android:id="@+id/indicatorIndicatorOne"
+                            android:layout_gravity="bottom|end"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_117pxv"
+                            android:layout_marginEnd="@dimen/_20pxh"
+                            android:layout_marginStart="@dimen/_20pxh"
+                            android:layout_marginTop="@dimen/_117pxv"
+                            android:layout_width="wrap_content"
+                            app:drawable_normal="@drawable/indicator_unselected_bg_white_a700_4c_radius_8"
+                            app:drawable_selected="@drawable/indicator_selected_bg_white_a700_radius_8"
+                            app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_8pxh"/>
+                    </FrameLayout>
+                    <FrameLayout android:id="@+id/frameStackbgTwo"
+                        android:layout_height="@dimen/_282pxv"
+                        android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_335pxh">
+                        <com.asksira.loopingviewpager.LoopingViewPager
+                            android:id="@+id/imageSliderSliderbgTwo"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_282pxv"
+                            android:layout_width="match_parent"
+                            app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+                        <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                            android:id="@+id/indicatorIndicatorTwo"
+                            android:layout_gravity="bottom|end"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_117pxv"
+                            android:layout_marginEnd="@dimen/_20pxh"
+                            android:layout_marginStart="@dimen/_20pxh"
+                            android:layout_marginTop="@dimen/_117pxv"
+                            android:layout_width="wrap_content"
+                            app:drawable_normal="@drawable/indicator_unselected_bg_white_a700_4c_radius_8"
+                            app:drawable_selected="@drawable/indicator_selected_bg_white_a700_radius_8"
+                            app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_8pxh"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTabbar2"
+                    android:layout_gravity="bottom|start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_148pxv"
+                    android:layout_marginTop="@dimen/_148pxv"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_55pxh}"
+                    style="@style/groupStylewhite_6" tools:itemCount="4" tools:listitem="@layout/row_tabbar2"/>
+            </FrameLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

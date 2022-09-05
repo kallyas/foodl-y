@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSliderallyourfavoriModel" type="com.foodly.app.modules.walkthrough4.data.model.ImageSliderSliderallyourfavoriModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnallyourfavori"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtAllyourfavori"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_13pxh"
+            android:layout_marginStart="@dimen/_13pxh"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{imageSliderSliderallyourfavoriModel.txtAllyourfavori}"
+            style="@style/txtSFProDisplaybold30" tools:text="@string/msg_all_your_favori"/>
+        <TextView android:gravity="start"
+            android:id="@+id/txtOrderfromthe"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:text="@{imageSliderSliderallyourfavoriModel.txtOrderfromthe}"
+            style="@style/txtSFProTextregular16" tools:text="@string/msg_order_from_the"/>
+    </LinearLayout>
+</layout>

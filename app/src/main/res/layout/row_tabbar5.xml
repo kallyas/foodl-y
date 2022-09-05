@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="tabbar5RowModel" type="com.foodly.app.modules.yourorders.data.model.Tabbar5RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearHome"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameStackactive"
+            android:layout_height="@dimen/_23pxv"
+            android:layout_marginEnd="@dimen/_6pxh" android:layout_width="@dimen/_22pxh">
+            <ImageView android:id="@+id/imageActive"
+                android:layout_gravity="top|start"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="@dimen/_14pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_deactive"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_deactive"/>
+            <ImageView android:id="@+id/imageSignal"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_19pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="@dimen/_14pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_signal_19x14"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_signal_19x14"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end" android:gravity="end"
+            android:id="@+id/txtHome"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{tabbar5RowModel.txtHome}"
+            style="@style/txtSFProTextmedium10_1" tools:text="@string/lbl_home"/>
+    </LinearLayout>
+</layout>

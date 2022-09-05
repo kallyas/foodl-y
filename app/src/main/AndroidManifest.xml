@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.foodly.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.foodly.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity android:exported="true"
+            android:name="com.foodly.app.modules.cardlist.ui.CardListActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.foodly.app.modules.homepagevone.ui.HomepageVoneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.yourorders1.ui.YourOrders1Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.homepagevthree.ui.HomepageVthreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.filtersvtwo.ui.FiltersVtwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.filtersfoodtypevone1.ui.FiltersFoodTypeVone1Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.appnavigation.ui.AppNavigationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.signinvtwo.ui.SignInVtwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.signupvtwo.ui.SignUpVtwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.paymentmethod.ui.PaymentMethodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.addpaymentmethod.ui.AddPaymentMethodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.walkthrough4.ui.Walkthrough4Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.homepagevtwo.ui.HomepageVtwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.signupvone.ui.SignUpVoneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.refertofriends.ui.ReferToFriendsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.walkthrough.ui.WalkthroughActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.singlerestaurants.ui.SingleRestaurantsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.featuredpartnersvtwo.ui.FeaturedPartnersVtwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.enteraddress.ui.EnterAddressActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.homepagevfour.ui.HomepageVfourActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.addsocialaccounts.ui.AddSocialAccountsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.orderdetails.ui.OrderDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.signinvone.ui.SignInVoneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.scancard.ui.ScanCardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.locations.ui.LocationsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.searchfood.ui.SearchFoodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.singlerestaurantvtwo.ui.SingleRestaurantVtwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.profilesettings.ui.ProfileSettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.changepassword.ui.ChangePasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.searchrestaurants.ui.SearchRestaurantsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.typelocation.ui.TypeLocationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.searchingfood.ui.SearchingFoodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.icons3434.ui.Icons3434Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.searchresultsvone.ui.SearchResultsVoneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.walkthrough2.ui.Walkthrough2Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.browsefoods.ui.BrowseFoodsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.addtoorder.ui.AddToOrderActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.loginbyphonenumber.ui.LoginByPhoneNumberActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.searchresultsvtwo.ui.SearchResultsVtwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.forgotpassword.ui.ForgotPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.icons2424.ui.Icons2424Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.sharelinkpopup.ui.ShareLinkPopupActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.singlerestaurantvone.ui.SingleRestaurantVoneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.accountsettings.ui.AccountSettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.confirmphonenumber.ui.ConfirmPhoneNumberActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.yourorders.ui.YourOrdersActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.findrestaurants.ui.FindRestaurantsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.featuredpartnersvone.ui.FeaturedPartnersVoneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.foodly.app.modules.resetemail.ui.ResetEmailActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listctaseconderyRowModel" type="com.foodly.app.modules.filtersvtwo.data.model.ListctaseconderyRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowctasecondery"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtCTASecondery"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.28" android:layout_width="0dp"
+            android:letterSpacing="0.05"
+            android:paddingBottom="@dimen/_12pxv"
+            android:paddingEnd="@dimen/_28pxh"
+            android:paddingStart="@dimen/_29pxh"
+            android:paddingTop="@dimen/_12pxv" android:singleLine="true"
+            android:text="@{listctaseconderyRowModel.txtCTASecondery}"
+            android:textAllCaps="true" style="@style/txtSolidRounded_2" tools:text="@string/lbl_all"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtCTASeconderyOne"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_weight="0.38" android:layout_width="0dp"
+            android:letterSpacing="0.05"
+            android:paddingBottom="@dimen/_12pxv"
+            android:paddingEnd="@dimen/_27pxh"
+            android:paddingStart="@dimen/_28pxh"
+            android:paddingTop="@dimen/_12pxv" android:singleLine="true"
+            android:text="@{listctaseconderyRowModel.txtCTASeconderyOne}"
+            android:textAllCaps="true" style="@style/txtSolidRounded_2" tools:text="@string/lbl_brunch"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtCTASeconderyTwo"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_weight="0.34" android:layout_width="0dp"
+            android:letterSpacing="0.05"
+            android:paddingBottom="@dimen/_12pxv"
+            android:paddingEnd="@dimen/_26pxh"
+            android:paddingStart="@dimen/_25pxh"
+            android:paddingTop="@dimen/_12pxv" android:singleLine="true"
+            android:text="@{listctaseconderyRowModel.txtCTASeconderyTwo}"
+            android:textAllCaps="true" style="@style/txtSolidRounded_2" tools:text="@string/lbl_dinner"/>
+    </LinearLayout>
+</layout>

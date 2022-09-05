@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchRestaurantsVM" type="com.foodly.app.modules.searchrestaurants.data.viewmodel.SearchRestaurantsVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnsearch"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_20pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linear29SearchResta"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSearch"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{searchRestaurantsVM.searchRestaurantsModel.txtSearch}"
+                style="@style/txtSFProDisplaysemibold28" tools:text="@string/lbl_search"/>
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_gray_50_border_bluegray_400_1a_radius_8"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewSearchform"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewSearchform"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/msg_search_on_foodl" app:searchIcon="@drawable/img_search_bluegray_400"/>
+            <FrameLayout android:id="@+id/frameStacktoprestaurants"
+                android:layout_height="@dimen/_658pxv"
+                android:layout_marginTop="@dimen/_33pxv" android:layout_width="match_parent">
+                <LinearLayout
+                    android:id="@+id/linearColumntoprestaurants"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTopRestaurants"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{searchRestaurantsVM.searchRestaurantsModel.txtTopRestaurants}"
+                        style="@style/txtSFProTextregular16_9" tools:text="@string/lbl_top_restaurants"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerGridcookiesandwich"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="match_parent"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2" itemSpace="@{@dimen/_15pxh}"
+                        tools:itemCount="4" tools:listitem="@layout/row_gridcookiesandwich"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerListcookiesandwichThree"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_15pxh}" tools:itemCount="2" tools:listitem="@layout/row_listcookiesandwich_three"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTabbar2"
+                    android:layout_gravity="bottom|start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_36pxv"
+                    android:layout_marginTop="@dimen/_36pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_55pxh}"
+                    style="@style/groupStylewhite_6" tools:itemCount="4" tools:listitem="@layout/row_tabbar8"/>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

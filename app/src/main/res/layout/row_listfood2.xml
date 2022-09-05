@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listfood2RowModel" type="com.foodly.app.modules.singlerestaurantvtwo.data.model.Listfood2RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFoodlist"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_2">
+        <ImageView android:id="@+id/imageFood"
+            android:layout_height="@dimen/_110pxh"
+            android:layout_width="@dimen/_110pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_food}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_food"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumncookiesandwichThree"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_2pxv"
+            android:layout_marginStart="@dimen/_18pxh"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_weight="0.65" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCookieSandwichThree"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listfood2RowModel.txtCookieSandwichThree}"
+                style="@style/txtSFProTextmedium18" tools:text="@string/lbl_cookie_sandwich"/>
+            <TextView android:id="@+id/txtShortbreadcho"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{listfood2RowModel.txtShortbreadcho}"
+                style="@style/txtSFProTextregular16_1" tools:text="@string/msg_shortbread_cho"/>
+            <LinearLayout android:id="@+id/linearRowprice"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearRowthirtyseven"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.62"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtThirtySeven"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="0.24"
+                        android:layout_width="0dp"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{listfood2RowModel.txtThirtySeven}"
+                        style="@style/txtSFProTextregular14_1" tools:text="@string/lbl"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_bluegray_400_90_radius_2"
+                        android:id="@+id/viewOvalCopyThreeFour"
+                        android:layout_height="@dimen/_4pxh"
+                        android:layout_marginBottom="@dimen/_4pxv"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_marginTop="@dimen/_6pxv" android:layout_width="@dimen/_4pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguageFive"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_weight="0.7"
+                        android:layout_width="0dp"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{listfood2RowModel.txtLanguageFive}"
+                        style="@style/txtSFProTextregular14_1" tools:text="@string/lbl_chinese"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_60pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.38"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{listfood2RowModel.txtPrice}"
+                    style="@style/txtSFProTextsemibold14" tools:text="@string/lbl_usd7_4"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

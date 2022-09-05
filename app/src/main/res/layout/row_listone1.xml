@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listone1RowModel" type="com.foodly.app.modules.yourorders1.data.model.Listone1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnone"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearRowprice"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:id="@+id/linearRowone"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.77" android:layout_width="0dp" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnOne"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:paddingBottom="@dimen/_4pxv"
+                    android:paddingEnd="@dimen/_8pxh"
+                    android:paddingStart="@dimen/_8pxh"
+                    android:paddingTop="@dimen/_4pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_1"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRoundedOutline_1" tools:text="@string/lbl_1"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCookieSandwich"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_3pxv"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.86"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{listone1RowModel.txtCookieSandwich}"
+                    style="@style/txtSFProTextmedium18" tools:text="@string/lbl_cookie_sandwich"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4pxv"
+                android:layout_marginStart="@dimen/_96pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_weight="0.23" android:layout_width="0dp"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listone1RowModel.txtPrice}"
+                style="@style/txtSFProTextsemibold14" tools:text="@string/lbl_usd7_4"/>
+        </LinearLayout>
+        <TextView android:gravity="start"
+            android:id="@+id/txtShortbreadcho"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_40pxh"
+            android:layout_marginStart="@dimen/_40pxh"
+            android:layout_marginTop="@dimen/_12pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:text="@{listone1RowModel.txtShortbreadcho}"
+            style="@style/txtSFProTextregular16_1" tools:text="@string/msg_shortbread_cho"/>
+    </LinearLayout>
+</layout>

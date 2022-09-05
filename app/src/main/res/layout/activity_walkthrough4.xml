@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="walkthrough4VM" type="com.foodly.app.modules.walkthrough4.data.viewmodel.Walkthrough4VM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linear01Walkthrough"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <FrameLayout android:gravity="start"
+            android:id="@+id/frameIllustrations"
+            android:layout_height="@dimen/_383pxv"
+            android:layout_marginTop="@dimen/_41pxv" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageArrowright"
+                android:layout_gravity="top|center"
+                android:layout_height="@dimen/_273pxh"
+                android:layout_marginBottom="@dimen/_47pxv"
+                android:layout_marginEnd="@dimen/_59pxh"
+                android:layout_marginStart="@dimen/_59pxh"
+                android:layout_marginTop="@dimen/_47pxv"
+                android:layout_width="@dimen/_252pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_arrowright_273x252}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_273x252"/>
+            <ImageView android:id="@+id/imageIllustration"
+                android:layout_gravity="bottom|center"
+                android:layout_height="@dimen/_299pxh"
+                android:layout_marginBottom="@dimen/_7pxv"
+                android:layout_marginEnd="@dimen/_38pxh"
+                android:layout_marginStart="@dimen/_38pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="@dimen/_299pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_illustration"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_illustration"/>
+        </FrameLayout>
+        <com.asksira.loopingviewpager.LoopingViewPager
+            android:gravity="center_horizontal"
+            android:id="@+id/imageSliderSliderallyourfavori"
+            android:layout_height="@dimen/_82pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_31pxv"
+            android:layout_width="match_parent" app:autoScroll="true"
+            app:isInfinite="true" app:scrollInterval="5000"/>
+
+        <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+            android:id="@+id/indicatorIndicator"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_36pxv"
+            android:layout_width="wrap_content"
+            app:drawable_normal="@drawable/indicator_selected_bg_green_600_radius_8"
+            app:drawable_selected="@drawable/indicator_unselected_bg_bluegray_400_6c_radius_8"
+            app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_8pxh"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnGetStarted"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_60pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.04"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/lbl_get_started"
+            android:textAllCaps="true" style="@style/btnSolidRounded_2" tools:text="@string/lbl_get_started"/>
+    </LinearLayout>
+</layout>

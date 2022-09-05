@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listcookiesandwichThreeRowModel" type="com.foodly.app.modules.searchrestaurants.data.model.ListcookiesandwichThreeRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameFoodcardsmall"
+        android:layout_height="wrap_content" android:layout_width="@dimen/_160pxh">
+        <LinearLayout android:id="@+id/linearColumncookiesandwichThree"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_2">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCookieSandwichThree"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_150pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listcookiesandwichThreeRowModel.txtCookieSandwichThree}"
+                style="@style/txtSFProTextmedium16" tools:text="@string/lbl_cookie_sandwich"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearType"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFortyEight"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.24"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:singleLine="true"
+                    android:text="@{listcookiesandwichThreeRowModel.txtFortyEight}"
+                    style="@style/txtSFProTextregular14" tools:text="@string/lbl"/>
+                <ImageView android:id="@+id/imageOvalCopyThreeFour"
+                    android:layout_height="@dimen/_4pxh"
+                    android:layout_marginBottom="@dimen/_7pxv"
+                    android:layout_marginStart="@dimen/_11pxh"
+                    android:layout_marginTop="@dimen/_9pxv"
+                    android:layout_width="@dimen/_4pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_ovalcopy3"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ovalcopy3"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLanguageFour"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_9pxh"
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:singleLine="true"
+                    android:text="@{listcookiesandwichThreeRowModel.txtLanguageFour}"
+                    style="@style/txtSFProTextregular14" tools:text="@string/lbl_chinese"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageBgFour"
+            android:layout_gravity="top|start"
+            android:layout_height="@dimen/_140pxh"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_width="@dimen/_160pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_food_7}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_food_7"/>
+    </FrameLayout>
+</layout>

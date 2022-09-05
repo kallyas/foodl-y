@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listbgThreeRowModel" type="com.foodly.app.modules.homepagevthree.data.model.ListbgThreeRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearCardsmall"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStylewhite_1">
+        <ImageView android:id="@+id/imageBGThree"
+            android:layout_height="@dimen/_160pxh"
+            android:layout_width="@dimen/_200pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_10pxh}"
+            imageRes="@{@drawable/img_bg_160x200}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_bg_160x200"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnthehalalguysThree"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTheHalalGuysThree"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02" android:singleLine="true"
+                android:text="@{listbgThreeRowModel.txtTheHalalGuysThree}"
+                style="@style/txtSFProDisplaymedium20" tools:text="@string/lbl_daylight_coffee"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtColarodoSanF"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{listbgThreeRowModel.txtColarodoSanF}"
+                style="@style/txtSFProTextregular16" tools:text="@string/msg_colarodo_san_f"/>
+            <LinearLayout android:id="@+id/linearRowfortyfive"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearRate"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.22"
+                    android:layout_width="0dp"
+                    android:orientation="vertical" style="@style/groupStylegreen_600cornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtFortyFive"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_4pxv"
+                        android:layout_marginEnd="@dimen/_8pxh"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{listbgThreeRowModel.txtFortyFive}"
+                        style="@style/txtSFProTextsemibold12" tools:text="@string/lbl_4_5"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTimeThree"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_3pxv"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.25"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{listbgThreeRowModel.txtTimeThree}"
+                    style="@style/txtSFProTextmedium14" tools:text="@string/lbl_25min"/>
+                <View
+                    android:background="@drawable/rectangle_bg_bluegray_400_radius_2"
+                    android:id="@+id/viewOvalThree"
+                    android:layout_height="@dimen/_4pxh"
+                    android:layout_marginBottom="@dimen/_6pxv"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_4pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFreedelivery"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_weight="0.51"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{listbgThreeRowModel.txtFreedelivery}"
+                    style="@style/txtSFProTextmedium14" tools:text="@string/lbl_free_delivery"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
